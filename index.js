@@ -34,99 +34,30 @@ function writeToScreen(){
 }
 
 
+const precedence = {
+    '+': 1,
+    '-': 1,
+    '%': 2,
+    '*': 3,
+    '/': 3,
+    '^': 4
+};
 
 
+function calculate(){
 
+}
 
+function hasHigherPrecedence(op1, op2) {
+    return precedence[op1] >= precedence[op2];
+}
 
+function infixToPostfix(infix){
+    let postfix='';
+    const stack=[];
 
+    for(let i=0;i<infix.length;i++){
+        let char=infix[i];
+    }
 
-
-// let islem="";
-
-// function islemOlustur(deger){
-//     islem+=deger;
-// }
-
-
-// function bir(){
-//     islemOlustur(1);
-//     islemYenile();
-// }
-// function iki(){
-//     islemOlustur(2);
-//     islemYenile();
-// }
-// function uc(){
-//     islemOlustur(3);
-//     islemYenile();
-// }
-// function dort(){
-//     islemOlustur(4);
-//     islemYenile();
-// }
-// function bes(){
-//     islemOlustur(5);
-//     islemYenile();
-// }
-// function alti(){
-//     islemOlustur(6);
-//     islemYenile();
-// }
-// function yedi(){
-//     islemOlustur(7);
-//     islemYenile();
-// }
-// function sekiz(){
-//     islemOlustur(8);
-//     islemYenile();
-// }
-// function dokuz(){
-//     islemOlustur(9);
-//     islemYenile();
-// }
-// function bol(){
-//     islemOlustur("/");
-//     islemYenile();
-// }
-// function carp(){
-//     islemOlustur("*");
-//     islemYenile();
-// }
-// function topla(){
-//     islemOlustur("+");
-//     islemYenile();
-// }
-// function cikar(){
-//     islemOlustur("-");
-//     islemYenile();
-// }
-// function mod(){
-//     islemOlustur("%");
-//     islemYenile();
-// }
-// function sifir(){
-//     islemOlustur(0);
-//     islemYenile();
-// }
-
-// function sil(){
-//     let temp="";    
-//     if(islem.length){
-//         for(let i=0;i<islem.length-1;i++){
-//             temp+=islem[i];
-//         }
-//         islem=temp;
-//     }
-//     temp="";
-//     islemYenile();
-// }
-
-// function temizle(){
-//     islem="";
-//     islemYenile();
-// }
-
-// function hesapla(){
-//     window.alert(islem);
-// }
+}
