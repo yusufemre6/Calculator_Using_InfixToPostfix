@@ -6,6 +6,7 @@ html , body{
     height: 100%;
 }
 
+/* Hesap makinesinin bütünün bulunduğu box style */
 .container-box{
     height: 500px;
     width: 350px;
@@ -18,6 +19,7 @@ html , body{
     height: 100%;
 }
 
+/* Girilen sayıların ve cevabın js ile gösterildiği row style */
 #result-section{
     display: flex;
     align-items: center;
@@ -27,6 +29,7 @@ html , body{
     overflow: auto;
 }
 
+/* Tuş takımı row style baslangici */
 #body{
     height: 75%;
 }

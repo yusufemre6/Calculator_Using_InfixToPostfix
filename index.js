@@ -3,7 +3,16 @@ const buttons=document.querySelectorAll("button");
 const specialChars=["/","*","-","+","%","="];
 const numbers=['0','1','2','3','4','5','6','7','8','9'];
 
+const precedence = {
+    '+': 1,
+    '-': 1,
+    '%': 2,
+    '*': 3,
+    '/': 3,
+    '^': 4
+};
 
+//basılan tuşların değerlerini alıp durumlara göre value değerine etki eden fonksiyon
 function addToValue(chartacter){
     if(chartacter==="="&&value!==""){
         if(specialChars.includes(value.toString().slice(-1)[0])||(value.toString().slice(-1)[0]==','))  return;
@@ -28,31 +37,24 @@ function addToValue(chartacter){
     writeToScreen();
 }
 
+//basılan butondan data-value alıp addToValue fonksiyonunu cagiran fonksiyon
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => addToValue(e.target.dataset.value));
 });
 
-
+//Bu fonksiyon result-box'a value değişkenini yazar
 function writeToScreen(){
     var text = document.getElementById("result");
     text.innerText = "";
     text.innerText = value;
 }
 
-
-const precedence = {
-    '+': 1,
-    '-': 1,
-    '%': 2,
-    '*': 3,
-    '/': 3,
-    '^': 4
-};
-
+//işaretlerin işlem önceliğini karşılaştıran fonksiyon
 function hasHigherPrecedence(op1, op2) {
     return precedence[op1] > precedence[op2];
 }
 
+// infixten postfixe işlemler
 function infixToPostfix(infix){
     let postfix='';
     const stack=[];
@@ -92,6 +94,7 @@ function infixToPostfix(infix){
     return postfix;
 }
 
+//postfixten sonuca işlemler
 function postfixToResult(text){
     let postfix= infixToPostfix(text).split(" ");
     let result;
