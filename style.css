@@ -62,7 +62,7 @@ table td{
 }
 
 .number{
-    color: black !important;
+    color: #EEEEEE !important;
 }
 
 #result-button{
@@ -74,7 +74,7 @@ table td{
 }
 
 .button-td:hover{
-    background-color: #EEEEEE;
+    background-color: #F79327;
 }
 
 #result-button:hover{
@@ -84,4 +84,5 @@ table td{
 #result{
     text-align: right;
     font-size: 50px;
+    color: #EEEEEE;
 }

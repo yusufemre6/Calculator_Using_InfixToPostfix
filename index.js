@@ -160,5 +160,9 @@ function postfixToResult(text){
         }
         sayac++;
     }
+    result=result.toString();
+    console.log(result.includes('.'));
+    if(result.includes('.'))result=result.replace('.',',');
+    console.log(result);
     return result;
 }
