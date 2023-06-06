@@ -51,7 +51,7 @@ function writeToScreen(){
 
 //işaretlerin işlem önceliğini karşılaştıran fonksiyon
 function hasHigherPrecedence(op1, op2) {
-    return precedence[op1] > precedence[op2];
+    return precedence[op1] >= precedence[op2];
 }
 
 // infixten postfixe işlemler
